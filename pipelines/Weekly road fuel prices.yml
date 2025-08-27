@@ -1,0 +1,9 @@
+version: pipelines/v0.1
+name: Weekly road fuel prices
+timeout: 0
+max_retries: 0
+data_components:
+- tap-govuk-weekly-road-fuel-prices
+- target-redshift
+properties:
+  target-redshift.default_target_schema: RAW_FUEL_LOCAL

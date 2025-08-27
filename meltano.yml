@@ -9,19 +9,23 @@ plugins:
   extractors:
   - name: tap-postgres
     variant: matatika
-    pip_url: git+https://github.com/Matatika/pipelinewise-tap-postgres.git@v1.0.0
+    pip_url: 
+      git+https://github.com/Matatika/pipelinewise-tap-postgres.git@v1.0.0
+  - name: tap-govuk-weekly-road-fuel-prices
+    variant: matatika
+    pip_url: git+https://github.com/Matatika/tap-spreadsheets-anywhere@v0.2.0
   loaders:
   - name: target-postgres
     variant: matatika
     pip_url: git+https://github.com/Matatika/pipelinewise-target-postgres@v0.2.0
   - name: target-redshift
-    variant: ticketswap
-    pip_url: git+https://github.com/TicketSwap/target-redshift.git
+    variant: transferwise
+    pip_url: pipelinewise-target-redshift
   transformers:
   - name: dbt
     variant: dbt-labs
-    pip_url: dbt-core~=1.7.0 dbt-postgres~=1.7.0 dbt-snowflake~=1.7.0 dbt-bigquery~=1.7.0
-      certifi==2025.1.31
+    pip_url: dbt-core~=1.7.0 dbt-postgres~=1.7.0 dbt-snowflake~=1.7.0 
+      dbt-bigquery~=1.7.0 certifi==2025.1.31
   files:
   - name: files-dbt
     variant: matatika
