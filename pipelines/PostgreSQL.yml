@@ -4,4 +4,4 @@ timeout: 0
 max_retries: 0
 data_components:
 - tap-postgres
-- Warehouse
+- target-redshift

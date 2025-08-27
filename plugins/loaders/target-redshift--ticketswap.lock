@@ -18,6 +18,66 @@
   ],
   "settings": [
     {
+      "name": "host",
+      "kind": "string",
+      "label": "Host",
+      "description": "Hostname for redshift instance.",
+      "hidden": false,
+      "sensitive": false,
+      "required": true,
+      "protected": false
+    },
+    {
+      "name": "port",
+      "kind": "string",
+      "value": "5432",
+      "label": "Port",
+      "description": "The port on which redshift is awaiting connection.",
+      "hidden": false,
+      "sensitive": false,
+      "protected": false
+    },
+    {
+      "name": "user",
+      "kind": "string",
+      "label": "User",
+      "description": "User name used to authenticate. Note if sqlalchemy_url is set this will be ignored.",
+      "hidden": false,
+      "sensitive": false,
+      "required": true,
+      "protected": false
+    },
+    {
+      "name": "password",
+      "kind": "string",
+      "label": "Password",
+      "description": "Password used to authenticate. Note if sqlalchemy_url is set this will be ignored.",
+      "hidden": false,
+      "sensitive": true,
+      "required": true,
+      "protected": false
+    },
+    {
+      "name": "dbname",
+      "kind": "string",
+      "label": "Database Name",
+      "description": "Database name. Note if sqlalchemy_url is set this will be ignored.",
+      "hidden": false,
+      "sensitive": false,
+      "required": true,
+      "protected": false
+    },
+    {
+      "name": "default_target_schema",
+      "kind": "string",
+      "value": "$MELTANO_EXTRACT__LOAD_SCHEMA",
+      "label": "Default Target Schema",
+      "description": "Redshift schema to send data to, example: tap-clickup",
+      "hidden": false,
+      "sensitive": false,
+      "protected": false
+    },
+    {
       "name": "activate_version",
       "kind": "boolean",
       "value": false,
@@ -62,25 +122,6 @@
       "description": "Redshift cluster identifier. Note if sqlalchemy_url is set or enable_iam_authentication is false this will be ignored.",
       "hidden": false,
       "sensitive": true,
-      "protected": false
-    },
-    {
-      "name": "dbname",
-      "kind": "string",
-      "label": "Database Name",
-      "description": "Database name. Note if sqlalchemy_url is set this will be ignored.",
-      "hidden": false,
-      "sensitive": false,
-      "protected": false
-    },
-    {
-      "name": "default_target_schema",
-      "kind": "string",
-      "value": "$MELTANO_EXTRACT__LOAD_SCHEMA",
-      "label": "Default Target Schema",
-      "description": "Redshift schema to send data to, example: tap-clickup",
-      "hidden": false,
-      "sensitive": false,
       "protected": false
     },
     {
@@ -139,15 +180,6 @@
       "protected": false
     },
     {
-      "name": "host",
-      "kind": "string",
-      "label": "Host",
-      "description": "Hostname for redshift instance.",
-      "hidden": false,
-      "sensitive": false,
-      "protected": false
-    },
-    {
       "name": "load_method",
       "kind": "options",
       "value": "append-only",
@@ -167,25 +199,6 @@
           "value": "overwrite"
         }
       ],
-      "hidden": false,
-      "sensitive": false,
-      "protected": false
-    },
-    {
-      "name": "password",
-      "kind": "string",
-      "label": "Password",
-      "description": "Password used to authenticate. Note if sqlalchemy_url is set this will be ignored.",
-      "hidden": false,
-      "sensitive": true,
-      "protected": false
-    },
-    {
-      "name": "port",
-      "kind": "string",
-      "value": "5432",
-      "label": "Port",
-      "description": "The port on which redshift is awaiting connection.",
       "hidden": false,
       "sensitive": false,
       "protected": false
@@ -281,15 +294,6 @@
       "value": "temp",
       "label": "Temp Dir",
       "description": "Where you want to store your temp data files.",
-      "hidden": false,
-      "sensitive": false,
-      "protected": false
-    },
-    {
-      "name": "user",
-      "kind": "string",
-      "label": "User",
-      "description": "User name used to authenticate. Note if sqlalchemy_url is set this will be ignored.",
       "hidden": false,
       "sensitive": false,
       "protected": false
