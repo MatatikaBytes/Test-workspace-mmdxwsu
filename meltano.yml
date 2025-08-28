@@ -11,6 +11,86 @@ plugins:
     variant: matatika
     pip_url: 
       git+https://github.com/Matatika/pipelinewise-tap-postgres.git@v1.0.0
+    metadata:
+      public-dim_bundle_limits:
+        replication-method: LOG_BASED
+      public-dim_carrier:
+        replication-method: LOG_BASED
+      public-dim_city:
+        replication-method: LOG_BASED
+      public-dim_company:
+        replication-method: LOG_BASED
+      public-dim_country:
+        replication-method: LOG_BASED
+      public-dim_currency:
+        replication-method: LOG_BASED
+      public-dim_date:
+        replication-method: LOG_BASED
+      public-dim_division:
+        replication-method: LOG_BASED
+      public-dim_enhancement:
+        replication-method: LOG_BASED
+      public-dim_import_channel:
+        replication-method: LOG_BASED
+      public-dim_item:
+        replication-method: LOG_BASED
+      public-dim_package_type:
+        replication-method: LOG_BASED
+      public-dim_postcode_area:
+        replication-method: LOG_BASED
+      public-dim_service:
+        replication-method: LOG_BASED
+      public-dim_status:
+        replication-method: LOG_BASED
+      public-dim_user:
+        replication-method: LOG_BASED
+      public-dim_warehouse:
+        replication-method: LOG_BASED
+      public-dim_warehouse_carrier_account:
+        replication-method: LOG_BASED
+      public-django_migrations:
+        replication-method: LOG_BASED
+      public-fact_company_history:
+        replication-method: LOG_BASED
+      public-fact_item:
+        replication-method: LOG_BASED
+      public-fact_package:
+        replication-method: LOG_BASED
+      public-fact_shipment:
+        replication-method: LOG_BASED
+      public-fact_shipment_dim_enhancement_group:
+        replication-method: LOG_BASED
+      public-fact_shipment_sla:
+        replication-method: LOG_BASED
+      public-fact_shipment_status_history:
+        replication-method: LOG_BASED
+    select:
+    - public-dim_bundle_limits.*
+    - public-dim_carrier.*
+    - public-dim_city.*
+    - public-dim_company.*
+    - public-dim_country.*
+    - public-dim_currency.*
+    - public-dim_date.*
+    - public-dim_division.*
+    - public-dim_enhancement.*
+    - public-dim_import_channel.*
+    - public-dim_item.*
+    - public-dim_package_type.*
+    - public-dim_postcode_area.*
+    - public-dim_service.*
+    - public-dim_status.*
+    - public-dim_user.*
+    - public-dim_warehouse.*
+    - public-dim_warehouse_carrier_account.*
+    - public-django_migrations.*
+    - '!public-fact_company_history.*'
+    - '!public-fact_item.*'
+    - '!public-fact_package.*'
+    - '!public-fact_shipment.*'
+    - '!public-fact_shipment_dim_enhancement_group.*'
+    - '!public-fact_shipment_sla.*'
+    - '!public-fact_shipment_status_history.*'
   - name: tap-govuk-weekly-road-fuel-prices
     variant: matatika
     pip_url: git+https://github.com/Matatika/tap-spreadsheets-anywhere@v0.2.0
