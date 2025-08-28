@@ -123,7 +123,7 @@
     {
       "name": "logical_poll_total_seconds",
       "kind": "integer",
-      "value": 10800,
+      "value": 1,
       "label": "Logical Poll Total Seconds",
       "description": "The total number of seconds to wait for new changes when using logical replication.",
       "hidden": false,
