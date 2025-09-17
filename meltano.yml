@@ -9,8 +9,7 @@ plugins:
   extractors:
   - name: tap-postgres
     variant: matatika
-    pip_url: 
-      git+https://github.com/Matatika/pipelinewise-tap-postgres.git@v1.0.0
+    pip_url: git+https://github.com/Matatika/pipelinewise-tap-postgres.git@v1.0.0
     metadata:
       public-dim_bundle_limits:
         replication-method: LOG_BASED
@@ -94,6 +93,9 @@ plugins:
   - name: tap-govuk-weekly-road-fuel-prices
     variant: matatika
     pip_url: git+https://github.com/Matatika/tap-spreadsheets-anywhere@v0.2.0
+  - name: tap-facebook
+    variant: matatika
+    pip_url: git+https://github.com/Matatika/tap-facebook.git
   loaders:
   - name: target-postgres
     variant: matatika
@@ -104,8 +106,8 @@ plugins:
   transformers:
   - name: dbt
     variant: dbt-labs
-    pip_url: dbt-core~=1.7.0 dbt-postgres~=1.7.0 dbt-snowflake~=1.7.0 
-      dbt-bigquery~=1.7.0 certifi==2025.1.31
+    pip_url: dbt-core~=1.7.0 dbt-postgres~=1.7.0 dbt-snowflake~=1.7.0 dbt-bigquery~=1.7.0
+      certifi==2025.1.31
   files:
   - name: files-dbt
     variant: matatika
