@@ -5,5 +5,3 @@ max_retries: 0
 data_components:
 - tap-govuk-weekly-road-fuel-prices
 - target-redshift
-properties:
-  target-redshift.default_target_schema: RAW_FUEL_LOCAL

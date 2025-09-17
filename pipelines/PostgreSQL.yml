@@ -5,5 +5,3 @@ max_retries: 0
 data_components:
 - tap-postgres
 - target-redshift
-properties:
-  target-redshift.default_target_schema: RAW_POSTGRESQL
