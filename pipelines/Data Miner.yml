@@ -1,0 +1,8 @@
+version: pipelines/v0.1
+name: Data Miner
+schedule: 0 0 0 25 12 ?
+timeout: 0
+max_retries: 0
+data_components:
+- tap-postgres
+- target-snowflake
