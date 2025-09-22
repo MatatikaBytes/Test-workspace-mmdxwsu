@@ -1,0 +1,136 @@
+{
+  "plugin_type": "extractors",
+  "name": "tap-snowflake",
+  "namespace": "tap_snowflake",
+  "variant": "transferwise",
+  "label": "Snowflake",
+  "docs": "https://www.matatika.com/data-details/tap-snowflake/",
+  "repo": "https://github.com/transferwise/pipelinewise-tap-snowflake",
+  "pip_url": "pipelinewise-tap-snowflake",
+  "description": "Snowflake is a cloud-based data warehousing platform.\n\nSnowflake is a fully-managed service that allows businesses to store, process, and analyze large amounts of structured and semi-structured data using cloud-based infrastructure. It provides a scalable and secure solution for data warehousing, data lakes, data engineering, data science, and data sharing. Snowflake's unique architecture separates compute and storage, allowing users to scale each independently and pay only for what they use. It also offers features such as automatic scaling, zero-copy cloning, and instant elasticity, making it easy for businesses to manage their data and derive insights from it. With Snowflake, users can query data using SQL, integrate with popular BI and ETL tools, and collaborate with others through secure data sharing.\n### Prerequisites\nTo obtain the required settings for connecting to Snowflake, you will need to have access to a Snowflake account. Once you have access, you can obtain the following settings:\n\n- Account: This is the name of your Snowflake account. You can find it in the URL when you log in to your Snowflake account. It will be in the format of <account_name>.snowflakecomputing.com.\n- Database Name: This is the name of the database you want to connect to. You can obtain this information from your Snowflake account administrator or by running a query in Snowflake to list the available databases.\n- User: This is the username you use to log in to your Snowflake account. You can obtain this information from your Snowflake account administrator.\n- Password: This is the password you use to log in to your Snowflake account. You can obtain this information from your Snowflake account administrator.\n- Warehouse: This is the name of the warehouse you want to use for your Snowflake account. You can obtain this information from your Snowflake account administrator or by running a query in Snowflake to list the available warehouses.\n- Tables: These are the names of the tables you want to access in your Snowflake account. You can obtain this information from your Snowflake account administrator or by running a query in Snowflake to list the available tables in the database you want to connect to.",
+  "logo_url": "/assets/logos/extractors/snowflake.png",
+  "capabilities": [
+    "catalog",
+    "discover",
+    "state"
+  ],
+  "settings": [
+    {
+      "name": "account",
+      "kind": "string",
+      "label": "Account",
+      "description": "The name or URL of the Snowflake account to connect to.",
+      "hidden": false,
+      "sensitive": false,
+      "required": "true",
+      "protected": false
+    },
+    {
+      "name": "dbname",
+      "kind": "string",
+      "label": "Database Name",
+      "description": "The name of the Snowflake database to connect to.",
+      "hidden": false,
+      "sensitive": false,
+      "required": "true",
+      "protected": false
+    },
+    {
+      "name": "user",
+      "kind": "string",
+      "label": "User",
+      "description": "The username to use when connecting to Snowflake.",
+      "hidden": false,
+      "sensitive": false,
+      "required": "true",
+      "protected": false
+    },
+    {
+      "name": "password",
+      "kind": "string",
+      "label": "Password",
+      "description": "The password to use when connecting to Snowflake.",
+      "hidden": false,
+      "sensitive": true,
+      "required": "true",
+      "protected": false
+    },
+    {
+      "name": "warehouse",
+      "kind": "string",
+      "label": "warehouse",
+      "description": "The name of the Snowflake warehouse to use for the connection.",
+      "hidden": false,
+      "sensitive": false,
+      "required": "true",
+      "protected": false
+    },
+    {
+      "name": "tables",
+      "kind": "string",
+      "label": "Tables",
+      "description": "The list of tables to include in the connection.",
+      "hidden": false,
+      "sensitive": false,
+      "required": "true",
+      "protected": false
+    },
+    {
+      "name": "role",
+      "kind": "string",
+      "label": "Role",
+      "description": "The Snowflake role to use for the connection.",
+      "hidden": false,
+      "sensitive": false,
+      "protected": false
+    },
+    {
+      "name": "default_replication_method",
+      "kind": "options",
+      "value": "FULL_TABLE",
+      "label": "Default Replication Method",
+      "description": "The default replication method to use for the connection.",
+      "options": [
+        {
+          "label": "Key-based Incremental Replication",
+          "value": "INCREMENTAL"
+        },
+        {
+          "label": "Full Table Replication",
+          "value": "FULL_TABLE"
+        }
+      ],
+      "hidden": false,
+      "sensitive": false,
+      "protected": false
+    },
+    {
+      "name": "private_key_path",
+      "kind": "string",
+      "label": "Private Key Path",
+      "description": "The path to the private key file to use for the connection.",
+      "hidden": false,
+      "sensitive": false,
+      "protected": false
+    },
+    {
+      "name": "private_key_passphrase",
+      "kind": "string",
+      "label": "Private Key Passphrase",
+      "description": "The passphrase to use for the private key file.",
+      "hidden": false,
+      "sensitive": true,
+      "protected": false
+    },
+    {
+      "name": "insecure_mode",
+      "kind": "string",
+      "value": "false",
+      "label": "Insecure Mode",
+      "description": "Whether to allow insecure connections to Snowflake.",
+      "hidden": false,
+      "sensitive": false,
+      "protected": false
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "plugin_type": "files",
+  "name": "analyze-auth0",
+  "namespace": "tap_auth0",
+  "variant": "matatika",
+  "label": "Auth0 Insights",
+  "repo": "https://github.com/Matatika/analyze-auth0",
+  "pip_url": "git+https://github.com/Matatika/analyze-auth0@v0.5.0",
+  "description": "Instant insights on users, logins and quotas from Auth0.",
+  "requires": {
+    "extractors": [
+      {
+        "name": "tap-auth0",
+        "variant": "matatika"
+      }
+    ]
+  },
+  "update": {
+    "*.yml": "true"
+  }
+}

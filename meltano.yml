@@ -96,6 +96,12 @@ plugins:
   - name: tap-facebook
     variant: matatika
     pip_url: git+https://github.com/Matatika/tap-facebook.git
+  - name: tap-auth0
+    variant: matatika
+    pip_url: git+https://github.com/Matatika/tap-auth0@v0.6.0
+  - name: tap-snowflake
+    variant: transferwise
+    pip_url: pipelinewise-tap-snowflake
   loaders:
   - name: target-postgres
     variant: matatika
@@ -103,6 +109,9 @@ plugins:
   - name: target-redshift
     variant: transferwise
     pip_url: pipelinewise-target-redshift
+  - name: target-snowflake
+    variant: matatika
+    pip_url: git+https://github.com/Matatika/target-snowflake--meltanolabs.git@v0.16.3-1
   transformers:
   - name: dbt
     variant: dbt-labs
@@ -112,6 +121,9 @@ plugins:
   - name: files-dbt
     variant: matatika
     pip_url: git+https://github.com/Matatika/files-dbt@v1.2
+  - name: analyze-auth0
+    variant: matatika
+    pip_url: git+https://github.com/Matatika/analyze-auth0@v0.5.0
   utilities:
   - name: matatika
     variant: matatika

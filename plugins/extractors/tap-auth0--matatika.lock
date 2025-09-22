@@ -1,0 +1,69 @@
+{
+  "plugin_type": "extractors",
+  "name": "tap-auth0",
+  "namespace": "tap_auth0",
+  "variant": "matatika",
+  "label": "Auth0",
+  "docs": "https://www.matatika.com/docs/instant-insights/tap-auth0/",
+  "repo": "https://github.com/Matatika/tap-auth0",
+  "pip_url": "git+https://github.com/Matatika/tap-auth0@v0.6.0",
+  "description": "Auth0 is an identity and access management platform.\n\nAuth0 is a cloud-based platform that provides a comprehensive set of tools and services for managing user authentication and authorization in web and mobile applications. It allows developers to easily add authentication and authorization capabilities to their applications, without having to build and maintain their own identity management system. Auth0 supports a wide range of authentication methods, including social login, multi-factor authentication, and passwordless authentication. It also provides features such as user management, role-based access control, and integration with third-party identity providers. With Auth0, developers can focus on building their applications, while leaving the complex task of identity management to the experts.\n### Prerequisites\nTo obtain the Client ID, Client Secret, and Domain for connecting to Auth0, you need to follow these steps:\n\n1. Log in to your Auth0 account.\n2. From the dashboard, click on the \"Applications\" tab.\n3. Click on the \"Create Application\" button.\n4. Choose the type of application you want to create (Single Page Application, Regular Web Application, etc.).\n5. Give your application a name and click on the \"Create\" button.\n6. Once your application is created, you will be redirected to the \"Settings\" tab.\n7. Here, you will find the Client ID and Client Secret.\n8. To obtain the Domain, go to the \"Settings\" tab of your Auth0 account and copy the value of the \"Domain\" field.\n\nNote: The exact steps may vary slightly depending on the version of Auth0 you are using.",
+  "logo_url": "/assets/images/datasource/tap-auth0.png",
+  "capabilities": [
+    "catalog",
+    "discover",
+    "state"
+  ],
+  "settings": [
+    {
+      "name": "client_id",
+      "kind": "string",
+      "label": "Client ID",
+      "description": "A unique identifier for the client application that is registered with Auth0.",
+      "hidden": false,
+      "sensitive": true,
+      "required": "true",
+      "protected": false
+    },
+    {
+      "name": "client_secret",
+      "kind": "string",
+      "label": "Client Secret",
+      "description": "A secret string that is used to authenticate the client application with Auth0.",
+      "hidden": false,
+      "sensitive": true,
+      "required": "true",
+      "protected": false
+    },
+    {
+      "name": "domain",
+      "kind": "string",
+      "label": "Domain",
+      "description": "The Auth0 domain associated with the tenant.",
+      "hidden": false,
+      "sensitive": false,
+      "required": "true",
+      "protected": false
+    },
+    {
+      "name": "job_poll_interval_ms",
+      "kind": "integer",
+      "value": 2000,
+      "label": "Job poll interval ms",
+      "description": "The interval in milliseconds at which to poll for the status of a long-running job.",
+      "hidden": false,
+      "sensitive": false,
+      "protected": false
+    },
+    {
+      "name": "job_poll_max_count",
+      "kind": "integer",
+      "value": 10,
+      "label": "Job poll max count",
+      "description": "The maximum number of times to poll for the status of a long-running job.",
+      "hidden": false,
+      "sensitive": false,
+      "protected": false
+    }
+  ]
+}
