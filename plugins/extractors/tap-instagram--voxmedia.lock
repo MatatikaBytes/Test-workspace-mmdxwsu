@@ -1,0 +1,40 @@
+{
+  "plugin_type": "extractors",
+  "name": "tap-instagram",
+  "namespace": "tap_instagram",
+  "variant": "voxmedia",
+  "label": "Instagram",
+  "docs": "https://www.matatika.com/data-details/tap-instagram/",
+  "repo": "https://github.com/voxmedia/tap-instagram",
+  "pip_url": "tap-instagram",
+  "description": "Instagram is a social media platform for sharing photos and videos.\n\nInstagram allows users to share photos and videos with their followers, as well as view and interact with content from other users. Users can also add filters and edit their photos before posting, and use hashtags to make their content more discoverable. Instagram also offers features such as Stories, Reels, and IGTV for sharing short-form video content, as well as direct messaging and shopping capabilities. The platform is popular among individuals, businesses, and influencers for building and engaging with their audiences.",
+  "logo_url": "/assets/logos/extractors/instagram.png",
+  "capabilities": [
+    "catalog",
+    "stream-maps",
+    "discover",
+    "state",
+    "schema-flattening",
+    "about"
+  ],
+  "settings": [
+    {
+      "name": "ig_user_ids",
+      "kind": "array",
+      "label": "IG User IDs",
+      "description": "A unique identifier for an Instagram user account.",
+      "hidden": false,
+      "sensitive": false,
+      "protected": false
+    },
+    {
+      "name": "access_token",
+      "kind": "string",
+      "label": "Access Token",
+      "description": "A token that grants access to the Instagram API for a specific user account.",
+      "hidden": false,
+      "sensitive": true,
+      "protected": false
+    }
+  ]
+}

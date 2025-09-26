@@ -102,6 +102,9 @@ plugins:
   - name: tap-snowflake
     variant: transferwise
     pip_url: pipelinewise-tap-snowflake
+  - name: tap-instagram
+    variant: voxmedia
+    pip_url: tap-instagram
   loaders:
   - name: target-postgres
     variant: matatika
