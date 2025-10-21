@@ -3,6 +3,7 @@ name: Data Miner
 schedule: 0 0 0 25 12 ?
 timeout: 0
 max_retries: 0
+script: meltano run --force --state-id-suffix "$PIPELINE_ID" tap-postgres target-snowflake
 data_components:
 - tap-postgres
 - target-snowflake

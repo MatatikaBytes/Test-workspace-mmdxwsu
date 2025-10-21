@@ -1,7 +1,7 @@
 version: pipelines/v0.1
-name: asas
+name: 5X Testing - Google Ads
 timeout: 0
 max_retries: 0
 data_components:
-- tap-facebook
-- target-postgres
+- tap-googleads
+- Snowflake
