@@ -1,0 +1,146 @@
+{
+  "plugin_type": "extractors",
+  "name": "tap-mongodb",
+  "namespace": "tap_mongodb",
+  "variant": "z3z1ma",
+  "label": "MongoDB",
+  "docs": "https://www.matatika.com/data-details/tap-mongodb/",
+  "repo": "https://github.com/z3z1ma/tap-mongodb",
+  "pip_url": "git+https://github.com/z3z1ma/tap-mongodb.git",
+  "executable": "tap-mongodb",
+  "description": "MongoDB is a NoSQL database program.\n\nMongoDB is a document-oriented database program that uses JSON-like documents with optional schemas, providing a flexible and scalable solution for managing and storing data. It allows for easy integration with various programming languages and frameworks, and offers features such as automatic sharding, replication, and indexing for efficient data management.",
+  "logo_url": "/assets/logos/extractors/mongodb.png",
+  "capabilities": [
+    "discover",
+    "batch",
+    "about",
+    "stream-maps",
+    "catalog",
+    "state",
+    "schema-flattening"
+  ],
+  "settings": [
+    {
+      "name": "mongo",
+      "kind": "object",
+      "label": "Mongo",
+      "description": "The MongoDB connection string.",
+      "hidden": false,
+      "sensitive": false,
+      "protected": false
+    },
+    {
+      "name": "stream_prefix",
+      "kind": "string",
+      "label": "Stream Prefix",
+      "description": "A prefix to add to the stream name.",
+      "hidden": false,
+      "sensitive": false,
+      "protected": false
+    },
+    {
+      "name": "optional_replication_key",
+      "kind": "boolean",
+      "label": "Optional Replication Key",
+      "description": "A key to use for replication.",
+      "hidden": false,
+      "sensitive": false,
+      "protected": false
+    },
+    {
+      "name": "database_includes",
+      "kind": "array",
+      "label": "Database Includes",
+      "description": "A list of databases to include in the stream.",
+      "hidden": false,
+      "sensitive": false,
+      "protected": false
+    },
+    {
+      "name": "database_excludes",
+      "kind": "array",
+      "label": "Database Excludes",
+      "description": "A list of databases to exclude from the stream.",
+      "hidden": false,
+      "sensitive": false,
+      "protected": false
+    },
+    {
+      "name": "strategy",
+      "kind": "options",
+      "label": "Strategy",
+      "description": "The strategy to use for streaming data.",
+      "options": [
+        {
+          "label": "Raw",
+          "value": "raw"
+        },
+        {
+          "label": "Envelope",
+          "value": "envelope"
+        },
+        {
+          "label": "Infer",
+          "value": "infer"
+        }
+      ],
+      "hidden": false,
+      "sensitive": false,
+      "protected": false
+    },
+    {
+      "name": "infer_schema_max_docs",
+      "kind": "integer",
+      "label": "Infer Schema Max Docs",
+      "description": "The maximum number of documents to use for inferring the schema.",
+      "hidden": false,
+      "sensitive": false,
+      "protected": false
+    },
+    {
+      "name": "stream_maps",
+      "kind": "object",
+      "label": "Stream Maps",
+      "description": "A list of stream maps to use for mapping data.",
+      "hidden": false,
+      "sensitive": false,
+      "protected": false
+    },
+    {
+      "name": "stream_map_config",
+      "kind": "object",
+      "label": "Stream Map Config",
+      "description": "Configuration options for the stream maps.",
+      "hidden": false,
+      "sensitive": false,
+      "protected": false
+    },
+    {
+      "name": "batch_config",
+      "kind": "object",
+      "label": "Batch Config",
+      "description": "Configuration options for batching data.",
+      "hidden": false,
+      "sensitive": false,
+      "protected": false
+    },
+    {
+      "name": "flattening_enabled",
+      "kind": "boolean",
+      "label": "Flattening Enabled",
+      "description": "Whether or not to enable flattening of nested data.",
+      "hidden": false,
+      "sensitive": false,
+      "protected": false
+    },
+    {
+      "name": "flattening_max_depth",
+      "kind": "integer",
+      "label": "Flattening Max Depth",
+      "description": "The maximum depth to flatten nested data.",
+      "hidden": false,
+      "sensitive": false,
+      "protected": false
+    }
+  ]
+}
