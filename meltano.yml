@@ -120,6 +120,12 @@ plugins:
   - name: tap-mssql
     variant: matatika
     pip_url: git+https://github.com/Matatika/pipelinewise-tap-mssql.git@v1.0.3
+  - name: tap-hubspot
+    variant: spacecowboy
+    pip_url: git+https://github.com/spacecowboy/tap-hubspot.git
+  - name: tap-bigquery
+    variant: matatika
+    pip_url: git+https://github.com/Matatika/tap-bigquery.git@v0.3.0
   loaders:
   - name: target-postgres
     variant: matatika
