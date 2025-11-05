@@ -4,4 +4,5 @@ timeout: 0
 max_retries: 0
 script: meltano select --list --all tap-postgres
 data_components:
-- tap-postgres
+- tap-snowflake
+- target-bigquery
