@@ -1,0 +1,3 @@
+version: datastores/v0.1
+name: V2 5X Snowflake Testing Destination
+data_plugin: loaders/target-snowflake--matatika
