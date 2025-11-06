@@ -129,6 +129,12 @@ plugins:
   - name: tap-facebook-systemtoken
     variant: matatika
     pip_url: git+https://github.com/Matatika/tap-facebook.git
+  - name: tap-instagram-systemtoken
+    variant: matatika
+    pip_url: git+https://github.com/Matatika/tap-instagram.git
+  - name: tap-spreadsheets-gmail
+    variant: matatika
+    pip_url: git+https://github.com/Matatika/tap-spreadsheets-anywhere@v0.4.0
   loaders:
   - name: target-postgres
     variant: matatika
