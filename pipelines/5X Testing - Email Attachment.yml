@@ -1,0 +1,7 @@
+version: pipelines/v0.1
+name: 5X Testing - Email Attachment
+timeout: 0
+max_retries: 0
+data_components:
+- tap-spreadsheets-gmail
+- V2 5X Snowflake Testing Destination
