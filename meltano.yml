@@ -135,6 +135,25 @@ plugins:
   - name: tap-spreadsheets-gmail
     variant: matatika
     pip_url: git+https://github.com/Matatika/tap-spreadsheets-anywhere@v0.4.0
+  - name: tap-spreadsheets-azure
+    variant: matatika
+    pip_url: git+https://github.com/Matatika/tap-spreadsheets-anywhere@v0.4.1 google-api-core<2.28.0
+  - name: tap-spreadsheets-anywhere
+    variant: matatika
+    pip_url: git+https://github.com/Matatika/tap-spreadsheets-anywhere@v0.4.1 google-api-core<2.28.0
+  - name: tap-spreadsheets-sftp
+    variant: matatika
+    pip_url: git+https://github.com/Matatika/tap-spreadsheets-anywhere@v0.4.1 google-api-core<2.28.0
+  - name: tap-spreadsheets-s3
+    variant: matatika
+    pip_url: git+https://github.com/Matatika/tap-spreadsheets-anywhere@v0.4.1 google-api-core<2.28.0
+  - name: tap-spreadsheets-imap
+    variant: matatika
+    pip_url: git+https://github.com/Matatika/tap-spreadsheets-anywhere@v0.4.0
+  - name: tap-spreadsheets-gcs
+    variant: matatika
+    pip_url: git+https://github.com/Matatika/tap-spreadsheets-anywhere.git@v0.4.1
+      google-api-core<2.28.0
   loaders:
   - name: target-postgres
     variant: matatika
