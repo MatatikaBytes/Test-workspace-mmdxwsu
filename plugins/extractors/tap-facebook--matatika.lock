@@ -2,7 +2,7 @@
   "plugin_type": "extractors",
   "name": "tap-facebook",
   "namespace": "tap_facebook",
-  "variant": "meltanolabs",
+  "variant": "matatika",
   "label": "Facebook Ads",
   "docs": "https://www-localhost.matatika.com/data-details/tap-facebook/",
   "repo": "https://github.com/Matatika/tap-facebook",
@@ -16,6 +16,38 @@
   ],
   "settings": [
     {
+      "name": "oauth_credentials.authorization_url",
+      "kind": "string",
+      "value": "https://www.facebook.com/v23.0/dialog/oauth",
+      "label": "OAuth identity provider authorization endpoint used create and refresh tokens",
+      "description": "The endpoint used to create and refresh OAuth tokens.",
+      "hidden": true,
+      "sensitive": false,
+      "required": "true",
+      "protected": false
+    },
+    {
+      "name": "oauth_credentials.scope",
+      "kind": "string",
+      "value": "1100853615489975",
+      "label": "Facebook OAuth config_id is used to link to the configuration to use",
+      "description": "The specific configuration permissions for which we are requesting user consent.",
+      "hidden": true,
+      "sensitive": false,
+      "required": "true",
+      "protected": false
+    },
+    {
+      "name": "oauth_credentials.access_token",
+      "kind": "string",
+      "label": "Access Token",
+      "description": "The token used to authenticate and authorize API requests.",
+      "hidden": true,
+      "sensitive": true,
+      "required": "true",
+      "protected": false
+    },
+    {
       "name": "account_ids",
       "kind": "array",
       "label": "Account IDs",
@@ -28,6 +60,9 @@
     },
     {
       "name": "access_token",
+      "aliases": [
+        "oauth_credentials.access_token"
+      ],
       "kind": "string",
       "label": "Access Token",
       "description": "A token that grants access to the Facebook Ads API.",

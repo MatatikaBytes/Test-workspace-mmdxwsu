@@ -56,20 +56,20 @@
       "protected": false
     },
     {
-      "name": "include_deleted",
-      "kind": "string",
-      "label": "Include Deleted Objects",
-      "description": "A setting that determines whether or not to include deleted objects in the retrieved data.",
-      "hidden": false,
-      "sensitive": false,
-      "protected": false
-    },
-    {
       "name": "api_version",
       "kind": "string",
       "value": "v23.0",
       "label": "API Version",
       "description": "The version of API to use.",
+      "hidden": false,
+      "sensitive": false,
+      "protected": false
+    },
+    {
+      "name": "insight_reports_list",
+      "kind": "array",
+      "label": "Custom Insight reports",
+      "description": "List of custom insight reports.",
       "hidden": false,
       "sensitive": false,
       "protected": false
