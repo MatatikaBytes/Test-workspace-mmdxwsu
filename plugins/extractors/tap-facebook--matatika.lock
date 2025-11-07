@@ -67,9 +67,9 @@
       "label": "Access Token",
       "description": "A token that grants access to the Facebook Ads API.",
       "placeholder": "Ex. *****************",
-      "hidden": false,
+      "hidden": true,
       "sensitive": true,
-      "required": "true",
+      "required": false,
       "protected": false
     },
     {
