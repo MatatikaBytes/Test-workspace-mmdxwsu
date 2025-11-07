@@ -1,7 +1,7 @@
 {
   "plugin_type": "extractors",
   "name": "tap-facebook-systemtoken",
-  "namespace": "tap_facebook",
+  "namespace": "tap_facebook_system_token",
   "variant": "matatika",
   "label": "Facebook Ads (System Access Token)",
   "docs": "https://www.matatika.com/data-details/tap-facebook/",

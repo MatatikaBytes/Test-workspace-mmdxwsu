@@ -3,7 +3,7 @@
   "name": "tap-facebook",
   "namespace": "tap_facebook",
   "variant": "meltanolabs",
-  "label": "Facebook Ads - Meltano Labs",
+  "label": "Facebook Ads",
   "docs": "https://www-localhost.matatika.com/data-details/tap-facebook/",
   "repo": "https://github.com/Matatika/tap-facebook",
   "pip_url": "git+https://github.com/Matatika/tap-facebook.git",
