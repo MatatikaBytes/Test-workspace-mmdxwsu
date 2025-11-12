@@ -1,7 +1,0 @@
-version: pipelines/v0.1
-name: 5X Testing - Facebook Ads
-timeout: 3600
-max_retries: 0
-data_components:
-- tap-facebook
-- V2 5X Snowflake Testing Destination
