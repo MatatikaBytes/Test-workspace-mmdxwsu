@@ -1,6 +1,5 @@
 version: pipelines/v0.1
-label: 5X Testing - Email Attachment
-name: 5x-testing---email-attachment
+name: 5X Testing - Email Attachment
 timeout: 1800
 max_retries: 0
 data_components:

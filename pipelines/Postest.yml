@@ -1,6 +1,5 @@
 version: pipelines/v0.1
-name: mt-test
-schedule: 0 0 6 * * *
+name: Postest
 timeout: 0
 max_retries: 0
 data_components:
