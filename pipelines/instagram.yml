@@ -1,7 +1,9 @@
 version: pipelines/v0.1
-name: PostgreSQL
+label: Instagram
+name: instagram
 timeout: 0
 max_retries: 0
 data_components:
-- tap-postgres
-- target-redshift
+- tap-instagram
+- Warehouse
+- dbt

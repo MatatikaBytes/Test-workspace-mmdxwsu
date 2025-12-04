@@ -1,7 +1,8 @@
 version: pipelines/v0.1
-name: Weekly road fuel prices
+label: PostgreSQL
+name: postgresql
 timeout: 0
 max_retries: 0
 data_components:
-- tap-govuk-weekly-road-fuel-prices
+- tap-postgres
 - target-redshift

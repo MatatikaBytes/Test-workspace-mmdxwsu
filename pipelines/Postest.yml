@@ -1,7 +1,0 @@
-version: pipelines/v0.1
-name: Postest
-timeout: 0
-max_retries: 0
-data_components:
-- tap-postgres
-- target-snowflake

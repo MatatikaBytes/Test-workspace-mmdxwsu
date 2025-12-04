@@ -1,8 +1,8 @@
 version: pipelines/v0.1
-name: Instagram
+label: Postest
+name: postest
 timeout: 0
 max_retries: 0
 data_components:
-- tap-instagram
-- Warehouse
-- dbt
+- tap-postgres
+- target-snowflake

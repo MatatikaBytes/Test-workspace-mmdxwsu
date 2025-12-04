@@ -1,5 +1,6 @@
 version: pipelines/v0.1
-name: Snowflake
+label: Snowflake
+name: snowflake
 timeout: 0
 max_retries: 0
 data_components:
