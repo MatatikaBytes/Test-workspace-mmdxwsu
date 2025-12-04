@@ -74,6 +74,9 @@ plugins:
     variant: matatika
     pip_url: git+https://github.com/Matatika/tap-spreadsheets-anywhere.git@v0.4.1
       google-api-core<2.28.0
+  - name: tap-quickbooks
+    variant: matatika
+    pip_url: git+https://github.com/Matatika/tap-quickbooks.git@v1.0.0
   loaders:
   - name: target-postgres
     variant: matatika
